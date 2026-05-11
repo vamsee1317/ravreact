@@ -2,16 +2,21 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Personal Blog</title>
+
+  <!-- External CSS -->
   <link rel="stylesheet" href="personal.css">
 </head>
 <body>
-  <!-- Navbar -->
+
+  <!-- ================= NAVBAR ================= -->
   <nav class="nav">
     <div class="navbar">
+      <!-- Logo -->
       <a href="#" class="logo">VamseeKrishna</a>
+
+      <!-- Navigation Links -->
       <ul class="navbar-links">
         <li><a href="#" class="nav-link">About</a></li>
         <li><a href="#" class="nav-link">Blog</a></li>
@@ -20,97 +25,84 @@
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section>
+  <!-- ================= HERO SECTION ================= -->
+  <section class="section">
     <div class="hero-container">
+
+      <!-- Text Content -->
       <div class="intro">
         <h1 class="title">Hello! I am VamseeKrishna</h1>
-        <p class="desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque voluptate eius labore
-          porro quis recusandae voluptates, quibusdam explicabo, delectus veniam beatae sapiente nihil
-          dignissimos nobis rerum!</p>
+        <p class="desc">
+          This is a simple personal blog layout built using HTML, CSS and Flexbox.
+        </p>
         <a href="#" class="nav-btn">Subscribe My Newsletter</a>
       </div>
-      <img src="./img/circle-cropped.png" class="user" alt="">
+
+      <!-- Profile Image -->
+      <img src="./img/circle-cropped.png" class="user" alt="Profile Image">
+
     </div>
   </section>
 
-  <!-- Services Section -->
-  <section>
-    <div class="card cardLeft">
-      <div class="service-d-flex">
+  <!-- ================= SERVICES SECTION ================= -->
+  <section class="section services">
+
+    <!-- Service Card 1 -->
+    <div class="card">
+      <div class="service-header">
         <img src="./img/Buy Me a Coffee-22.svg" class="service-icon" alt="">
-        <h1 class="service-heading">Static Websites</h1>
+        <h2>Static Websites</h2>
       </div>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad minima explicabo perspiciatis atque nesciunt
-        officiis suscipit consectetur.</p>
+      <p>Simple websites built using HTML, CSS and JavaScript.</p>
     </div>
 
-    <div class="card cardRight">
-      <div class="service-d-flex">
+    <!-- Service Card 2 -->
+    <div class="card">
+      <div class="service-header">
         <img src="./img/Buy Me a Coffee-23.svg" class="service-icon" alt="">
-        <h1 class="service-heading">Dynamic Websites</h1>
+        <h2>Dynamic Websites</h2>
       </div>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad minima explicabo perspiciatis atque nesciunt
-        officiis suscipit consectetur.</p>
+      <p>Interactive websites with forms, APIs and dynamic content.</p>
     </div>
+
   </section>
 
-  <!-- Feedback Section -->
-  <section>
+  <!-- ================= FEEDBACK SECTION ================= -->
+  <section class="section">
     <div class="feedback-container">
-      <div class="feedback-card fc1">
-        <div class="feedback-user-container">
-          <img src="./img/16.jpg" class="feedback-user" alt="">
-        </div>
-        <h2>Amit Kumar</h2>
+
+      <!-- Feedback Card 1 -->
+      <div class="feedback-card">
+        <img src="./img/16.jpg" class="feedback-user" alt="">
+        <h3>Amit Kumar</h3>
         <small>Founder of TechBuzz</small>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum, sequi molestias vitae optio voluptates.</p>
+        <p>Very professional and clean website design.</p>
       </div>
 
-      <div class="feedback-card fc2">
-        <div class="feedback-user-container">
-          <img src="./img/13.jpg" class="feedback-user" alt="">
-        </div>
-        <h2>Shreya</h2>
-        <small>Founder of yourStory</small>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum, sequi molestias vitae optio voluptates.</p>
+      <!-- Feedback Card 2 -->
+      <div class="feedback-card">
+        <img src="./img/13.jpg" class="feedback-user" alt="">
+        <h3>Shreya</h3>
+        <small>Founder of YourStory</small>
+        <p>Highly recommended for frontend projects.</p>
       </div>
+
     </div>
-
-    <!-- Contact Form -->
-    <section>
-      <div class="card">
-        <h1 class="discuss-title">Let's discuss your project!</h1>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est quasi dicta aperiam eos eveniet!</p>
-        <input type="text" placeholder="Enter your name">
-        <input type="email" placeholder="Enter your email">
-        <textarea cols="30" rows="5" placeholder="Please share your ideas!"></textarea>
-        <button class="submit-btn">Let's Meet Live</button>
-      </div>
-    </section>
   </section>
 
-  <!-- Dots Loader -->
-  <section class="dots-container">
-    <div class="dot"></div>
-    <div class="dot"></div>
-    <div class="dot"></div>
-    <div class="dot"></div>
-    <div class="dot"></div>
+  <!-- ================= CONTACT FORM ================= -->
+  <section class="section">
+    <div class="card">
+      <h2>Let's discuss your project!</h2>
+      <p>Share your idea and I will get back to you.</p>
+
+      <input type="text" placeholder="Your Name">
+      <input type="email" placeholder="Your Email">
+      <textarea rows="5" placeholder="Your Message"></textarea>
+
+      <button class="submit-btn">Let's Meet Live</button>
+    </div>
   </section>
 
-  <!-- JS for Scroll Animations -->
-  <script>
-    const cards = document.querySelectorAll('.feedback-card');
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('show');
-        }
-      });
-    }, { threshold: 0.2 });
-
-    cards.forEach(card => observer.observe(card));
-  </script>
 </body>
 </html>
